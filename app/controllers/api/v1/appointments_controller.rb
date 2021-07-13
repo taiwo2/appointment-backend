@@ -44,4 +44,3 @@ class Api::V1::AppointmentsController < ApplicationController
     params.permit(:user_id, :doctor_id, :appointment_date)
   end
 end
-
