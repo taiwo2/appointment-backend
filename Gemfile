@@ -4,16 +4,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
-gem 'rspec', '~> 3.10'
-# Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
-# Use Puma as the app server
-gem 'puma', '~> 5.0'
 gem 'bcrypt', '~> 3.1', '>= 3.1.16'
+gem 'puma', '~> 5.0'
 gem 'jwt', '~> 2.2', '>= 2.2.3'
-gem 'simple_command', '~> 0.1.0'
+gem 'pg', '~> 1.1'
+gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 gem 'rack-cors', '~> 1.1', '>= 1.1.1'
+
+gem 'simple_command', '~> 0.1.0'
+
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
@@ -34,10 +33,11 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen', '~> 3.3'
-  gem 'web-console', '>= 4.1.0'
   gem 'spring', '~> 2.1', '>= 2.1.1'
   gem 'spring-watcher-listen', '~> 2.0', '>= 2.0.1'
   gem 'rack-mini-profiler', '~> 2.0'
+  gem 'web-console', '>= 4.1.0'
+  
  
 end
 

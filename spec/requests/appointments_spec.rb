@@ -42,7 +42,7 @@ RSpec.describe 'Appointments', type: :request do
         email: 'abcdef@mail.com',
         password: '12345678'
       }
-    headers = { 'Authorization': JSON.parse(response.body)['jwt'] }
+    headers = { Authorization: JSON.parse(response.body)['jwt'] }
     get "/api/v1/users/#{u.id}/appointments", headers: headers
     expect(response).to have_http_status(:forbidden)
     expect(response.content_type).to eq('application/json')
