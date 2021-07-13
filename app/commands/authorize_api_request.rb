@@ -21,11 +21,13 @@ class AuthorizeApiRequest
     @decoded_auth_token ||= JsonWebToken.decode(http_auth_header)
   end
 
+  # rubocop:disable Metrics/MethodLength
   def http_auth_header
-    headers['Authorization'].split(' ').last if headers['Authorization'].present?
+    return headers['Authorization'].split(' ').last if headers['Authorization'].present?
 
     errors.add(:token, 'Missing token')
 
     nil
   end
+  # rubocop:enable Metrics/MethodLength
 end
