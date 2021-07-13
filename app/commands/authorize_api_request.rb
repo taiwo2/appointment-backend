@@ -22,7 +22,7 @@ class AuthorizeApiRequest
   end
 
   def http_auth_header
-     headers['Authorization'].split(' ').last if headers['Authorization'].present?
+    headers['Authorization'].split(' ').last if headers['Authorization'].present?
 
     errors.add(:token, 'Missing token')
 
