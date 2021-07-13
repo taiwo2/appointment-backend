@@ -23,11 +23,10 @@ class AuthorizeApiRequest
 
   # rubocop:disable Metrics/MethodLength
   def http_auth_header
-    return headers['Authorization'].split(' ').last if headers['Authorization'].present?
+    headers['Authorization'].split(' ').last if headers['Authorization'].present?
 
     errors.add(:token, 'Missing token')
 
     nil
   end
-  # rubocop:enable Metrics/MethodLength
 end
