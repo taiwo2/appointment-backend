@@ -24,7 +24,7 @@ class AuthorizeApiRequest
 # rubocop:disable all
 
   def http_auth_header
-    headers['Authorization'].split(' ').last if headers['Authorization'].present?
+    return headers['Authorization'].split(' ').last if headers['Authorization'].present?
 
     errors.add(:token, 'Missing token')
 
