@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   namespace :api do
     namespace :v1 do
-      resources :doctors, only: %i[:index, :show]
-      resources :users, only: %i[:create] do 
+      resources :doctors, only: [:index, :show]
+      resources :users, only: [:create] do 
         resources :appointments
       end
     end
