@@ -12,7 +12,7 @@ RSpec.describe 'Doctors', type: :request do
         email: 'abcdef@mail.com',
         password: '12345678'
       }
-    headers = { 'Authorization': JSON.parse(response.body)['jwt'] }
+    headers = { Authorization: JSON.parse(response.body)['jwt'] }
     get '/api/v1/doctors', headers: headers
     expect(response).to have_http_status(:ok)
     expect(response.content_type).to eq('application/json; charset=utf-8')

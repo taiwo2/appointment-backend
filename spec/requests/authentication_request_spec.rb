@@ -28,7 +28,7 @@ RSpec.describe 'Authentications', type: :request do
         email: 'abcdef@mail.com',
         password: '12345678'
       }
-    headers = { 'Authorization': JSON.parse(response.body)['jwt'] }
+    headers = { Authorization: JSON.parse(response.body)['jwt'] }
     get '/auto_login', headers: headers
     expect(response).to have_http_status(:ok)
     expect(response.body).to include('name')

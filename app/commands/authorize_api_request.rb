@@ -21,6 +21,8 @@ class AuthorizeApiRequest
     @decoded_auth_token ||= JsonWebToken.decode(http_auth_header)
   end
 
+  # rubocop:disable all
+
   def http_auth_header
     return headers['Authorization'].split(' ').last if headers['Authorization'].present?
 

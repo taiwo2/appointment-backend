@@ -12,7 +12,7 @@ RSpec.describe 'Appointments', type: :request do
         email: 'abcdef@mail.com',
         password: '12345678'
       }
-    headers = { 'Authorization': JSON.parse(response.body)['jwt'] }
+    headers = { Authorization: JSON.parse(response.body)['jwt'] }
     get "/api/v1/users/#{JSON.parse(response.body)['user']['id']}/appointments", headers: headers
     expect(response).to have_http_status(:ok)
     expect(response.content_type).to eq('application/json; charset=utf-8')
@@ -25,7 +25,7 @@ RSpec.describe 'Appointments', type: :request do
         password: '12345678'
       }
     d = Doctor.create(name: 'Abcde')
-    headers = { 'Authorization': JSON.parse(response.body)['jwt'] }
+    headers = { Authorization: JSON.parse(response.body)['jwt'] }
     post "/api/v1/users/#{JSON.parse(response.body)['user']['id']}/appointments", headers: headers, params:
      {
        doctor_id: d.id,
@@ -42,7 +42,7 @@ RSpec.describe 'Appointments', type: :request do
         email: 'abcdef@mail.com',
         password: '12345678'
       }
-    headers = { 'Authorization': JSON.parse(response.body)['jwt'] }
+    headers = { Authorization: JSON.parse(response.body)['jwt'] }
     get "/api/v1/users/#{u.id}/appointments", headers: headers
     expect(response).to have_http_status(:forbidden)
     expect(response.content_type).to eq('application/json; charset=utf-8')
