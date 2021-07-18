@@ -5,6 +5,8 @@ ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'bcrypt', '~> 3.1', '>= 3.1.16'
+gem 'faker', '~> 2.18'
+
 gem 'jwt', '~> 2.2', '>= 2.2.3'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'

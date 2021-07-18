@@ -7,7 +7,7 @@ RSpec.describe 'Users', type: :request do
         email: 'abcdefg@mail.com',
         password: '1234555',
         password_confirmation: '1234555' }
-    expect(response.content_type).to eq('application/json')
+    expect(response.content_type).to eq('application/json; charset=utf-8')
     expect(response).to have_http_status(:created)
   end
 end

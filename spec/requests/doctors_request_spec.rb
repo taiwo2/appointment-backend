@@ -15,6 +15,6 @@ RSpec.describe 'Doctors', type: :request do
     headers = { 'Authorization': JSON.parse(response.body)['jwt'] }
     get '/api/v1/doctors', headers: headers
     expect(response).to have_http_status(:ok)
-    expect(response.content_type).to eq('application/json')
+    expect(response.content_type).to eq('application/json; charset=utf-8')
   end
 end

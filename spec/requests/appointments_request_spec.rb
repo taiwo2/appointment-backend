@@ -15,7 +15,7 @@ RSpec.describe 'Appointments', type: :request do
     headers = { 'Authorization': JSON.parse(response.body)['jwt'] }
     get "/api/v1/users/#{JSON.parse(response.body)['user']['id']}/appointments", headers: headers
     expect(response).to have_http_status(:ok)
-    expect(response.content_type).to eq('application/json')
+    expect(response.content_type).to eq('application/json; charset=utf-8')
   end
 
   it 'only logged in user can create an appointment' do
@@ -32,7 +32,7 @@ RSpec.describe 'Appointments', type: :request do
        appointment_date: Date.new(2020, 11, 29)
      }
     expect(response).to have_http_status(:created)
-    expect(response.content_type).to eq('application/json')
+    expect(response.content_type).to eq('application/json; charset=utf-8')
   end
 
   it 'expect to have http status forbidden if logged in user tries to view other appointments' do
@@ -45,6 +45,6 @@ RSpec.describe 'Appointments', type: :request do
     headers = { 'Authorization': JSON.parse(response.body)['jwt'] }
     get "/api/v1/users/#{u.id}/appointments", headers: headers
     expect(response).to have_http_status(:forbidden)
-    expect(response.content_type).to eq('application/json')
+    expect(response.content_type).to eq('application/json; charset=utf-8')
   end
 end

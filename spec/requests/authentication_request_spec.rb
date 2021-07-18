@@ -9,7 +9,7 @@ RSpec.describe 'Authentications', type: :request do
         password: '12345678'
       }
     expect(response.body).to include('jwt')
-    expect(response.content_type).to eq('application/json')
+    expect(response.content_type).to eq('application/json; charset=utf-8')
     expect(response).to have_http_status(:ok)
   end
 
