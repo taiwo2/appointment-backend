@@ -15,7 +15,7 @@ Doctor's appointments is a an API tied to a frontend written in react, made usin
 
 ## The Web App
 
-The live version of this project is on [Doctor's Appointments](https://infinite-beach-95886.herokuapp.com/)
+The live version of this project is on [Doctor's Appointments](https://sleepy-ocean-62491.herokuapp.com/)
 
 ## Video Link
 
