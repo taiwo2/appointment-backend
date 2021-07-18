@@ -15,7 +15,7 @@ Doctor's appointments is a an API tied to a frontend written in react, made usin
 
 ## The Web App
 
-The live version of this project is on [Doctor's Appointments](https://infinite-beach-95886.herokuapp.com/)
+The live version of this project is on [Doctor's Appointments](https://sleepy-ocean-62491.herokuapp.com/)
 
 ## Video Link
 
@@ -27,8 +27,8 @@ To get a local copy up and running follow these simple example steps.İnitial
 
 **Setup**
 
-- Clone this repository with `https://github.com/taiwo2/ror-lifestyle-capstone.git` using your terminal or command line.<br>
-- Change to the project directory by entering `cd ror-lifestyle-capstone` in the terminal<br>
+- Clone this repository with `https://github.com/taiwo2/appointment-backend.git` using your terminal or command line.<br>
+- Change to the project directory by entering `cd appointment-backend` in the terminal<br>
 - Next run `bundle install` to install the necessary dependencies<br>
 - run rails `active_storage:install`
 - run `rails db:create`
