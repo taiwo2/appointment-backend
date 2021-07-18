@@ -27,7 +27,7 @@ To get a local copy up and running follow these simple example steps.İnitial
 
 **Setup**
 
-- Clone this repository with `https://github.com/taiwo2/ror-lifestyle-capstone.git` using your terminal or command line.<br>
+- Clone this repository with `https://github.com/taiwo2/appointment-backend.git` using your terminal or command line.<br>
 - Change to the project directory by entering `cd ror-lifestyle-capstone` in the terminal<br>
 - Next run `bundle install` to install the necessary dependencies<br>
 - run rails `active_storage:install`
